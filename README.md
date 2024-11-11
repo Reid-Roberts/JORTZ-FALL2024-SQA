@@ -7,3 +7,6 @@ Team Members
   - Jack Brewster
   - Trey Cashon
   - Reid Roberts
+
+Trello:
+https://trello.com/b/qU9iCmP3/sqa-project-team-jortz
