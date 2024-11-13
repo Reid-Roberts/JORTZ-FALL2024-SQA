@@ -1,0 +1,7 @@
+repos:
+- repo: https://github.com/Reid-Roberts/JORTZ-FALL2024-SQA.git
+  rev: '' # Update me!
+  hooks:
+  - id: bandit
+    args: ["-c", "pyproject.toml"]
+    additional_dependencies: ["bandit[toml]"]
