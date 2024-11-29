@@ -5,6 +5,8 @@ Oct 20, 2020
 Executes the pattern matching and data flow analysis 
 '''
 
+##Minor Change to Test Codacy CI
+
 import py_parser
 import constants 
 import projectLogger
