@@ -7,9 +7,13 @@ Executes the pattern matching and data flow analysis
 
 import py_parser
 import constants 
+import projectLogger
 
 def getDataLoadCount( py_file ):
+    logObj = projectLogger.giveMeLoggingObject ()
+    logobj.info("First Data Load Counter Method Activated")
     data_load_count = 0 
+    logobj.info("The data load count is initialized to {}".format(data_load_count))
     py_tree = py_parser.getPythonParseObject(py_file)
     func_def_list  = py_parser.getPythonAtrributeFuncs( py_tree ) 
 
@@ -125,11 +129,16 @@ def getDataLoadCount( py_file ):
     # this will be used to check if the file_name passed in as file to read, is logged  
     LOGGING_IS_ON_FLAG = py_parser.checkLoggingPerData( py_tree, constants.DUMMY_LOG_KW ) 
     # print(LOGGING_IS_ON_FLAG, data_load_count) 
+    logobj.info("The data load count has totalled to {}".format(data_load_count))
     return data_load_count 
     
     
 def getDataLoadCountb( py_file ):
+    logObj = projectLogger.giveMeLoggingObject ()
+    logobj.info("Second Data Load Counter Method Activated | B")
     data_load_countb = 0 
+    logobj.info("The data load count B is initialized to {}".format(data_load_countb))
+	
     py_tree = py_parser.getPythonParseObject(py_file)
     func_assign_list  = py_parser.getFunctionAssignments( py_tree ) 
 
@@ -146,11 +155,16 @@ def getDataLoadCountb( py_file ):
             
     LOGGING_IS_ON_FLAG = py_parser.checkLoggingPerData( py_tree, constants.DUMMY_LOG_KW ) 
     # print(LOGGING_IS_ON_FLAG, data_load_countb) 
+    logobj.info("The data load count B has totalled to {}".format(data_load_countb))
     return data_load_countb 
 
 
 def getDataLoadCountc( py_file ):
+    logObj = projectLogger.giveMeLoggingObject ()
+    logobj.info("Third Data Load Counter Method Activated | C")
     data_load_countc = 0 
+    logobj.info("The data load count C is initialized to {}".format(data_load_countc))
+	
     py_tree = py_parser.getPythonParseObject(py_file)
     func_assign_list  = py_parser.getFunctionDefinitions( py_tree ) 
     for func_ in func_assign_list:
@@ -210,11 +224,16 @@ def getDataLoadCountc( py_file ):
             
     LOGGING_IS_ON_FLAG = py_parser.checkLoggingPerData( py_tree, constants.DUMMY_LOG_KW ) 
     # print(LOGGING_IS_ON_FLAG, data_load_countc) 
+    logobj.info("The data load count C has totalled to {}".format(data_load_countc))
     return data_load_countc 
 
 
 def getModelLoadCounta( py_file ):
+    logObj = projectLogger.giveMeLoggingObject ()
+    logobj.info("First MODEL Load Counter Method Activated | A")
     model_load_counta = 0 
+    logobj.info("The model load count A is initialized to {}".format(model_load_counta))
+	
     py_tree = py_parser.getPythonParseObject(py_file)
     func_def_list  = py_parser.getPythonAtrributeFuncs( py_tree ) 
     for def_ in func_def_list:
@@ -258,11 +277,16 @@ def getModelLoadCounta( py_file ):
             
     LOGGING_IS_ON_FLAG = py_parser.checkLoggingPerData( py_tree, constants.DUMMY_LOG_KW )    
     # print(LOGGING_IS_ON_FLAG, model_load_counta) 
+    logobj.info("The model load count A has totalled to {}".format(model_load_counta))
     return model_load_counta 
     
     
 def getModelLoadCountb( py_file ):
+    logObj = projectLogger.giveMeLoggingObject ()
+    logobj.info("Second MODEL Load Counter Method Activated | B")
     model_load_countb = 0 
+    logobj.info("The model load count B is initialized to {}".format(model_load_countb))
+	
     py_tree = py_parser.getPythonParseObject(py_file)
     func_assign_list  = py_parser.getFunctionAssignments( py_tree ) 
 
@@ -280,6 +304,7 @@ def getModelLoadCountb( py_file ):
             
     LOGGING_IS_ON_FLAG = py_parser.checkLoggingPerData( py_tree, constants.DUMMY_LOG_KW ) 
     # print(LOGGING_IS_ON_FLAG, model_load_countb) 
+    logobj.info("The model load count B has totalled to {}".format(model_load_countb))
     return model_load_countb 
     
     
