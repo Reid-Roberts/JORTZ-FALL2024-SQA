@@ -1,3 +1,5 @@
+## same logger from in class worshop to be now implemented in project
+
 import logging
 
 
