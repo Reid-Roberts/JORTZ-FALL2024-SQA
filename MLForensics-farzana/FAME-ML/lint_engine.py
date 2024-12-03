@@ -11,6 +11,7 @@ Executes the pattern matching and data flow analysis
 
 import py_parser
 import constants 
+import random
 import projectLogger
 
 def getDataLoadCount( py_file ):
@@ -812,3 +813,26 @@ def getIncompleteLoggingCount( py_file ):
 	LOGGING_IS_ON_FLAG = py_parser.checkLoggingPerData( py_tree, constants.DUMMY_LOG_KW ) 
 	# print(LOGGING_IS_ON_FLAG, incomplete_logging_count) 
 	return incomplete_logging_count 
+
+
+def generateRandomFileName(length=10):
+    # Generates a random name for a file
+    return ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(length)) + '.py'
+
+def fuzzing(name):
+    res1 = getDataLoadCount(name)
+    res2 = getDataLoadCountb(name)
+    res3 = getDataLoadCountc(name)
+    res4 = getModelLoadCounta(name)
+    res5 = getModelLoadCountb(name)
+    return res1, res2, res3, res4, res5
+
+def simpleFuzzer(tests=10):
+    for _ in range(tests):
+        py_file = generateRandomFileName()
+        result = fuzzing(py_file)
+
+
+
+if __name__ == '__main__':
+    simpleFuzzer()
