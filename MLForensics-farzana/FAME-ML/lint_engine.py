@@ -16,7 +16,7 @@ import random
 import projectLogger
 
 def getDataLoadCount( py_file ):
-    logObj = projectLogger.giveMeLoggingObject ()
+    logobj = projectLogger.giveMeLoggingObject ()
     logobj.info("First Data Load Counter Method Activated")
     data_load_count = 0 
     logobj.info("The data load count is initialized to {}".format(data_load_count))
@@ -140,7 +140,7 @@ def getDataLoadCount( py_file ):
     
     
 def getDataLoadCountb( py_file ):
-    logObj = projectLogger.giveMeLoggingObject ()
+    logobj = projectLogger.giveMeLoggingObject ()
     logobj.info("Second Data Load Counter Method Activated | B")
     data_load_countb = 0 
     logobj.info("The data load count B is initialized to {}".format(data_load_countb))
@@ -166,7 +166,7 @@ def getDataLoadCountb( py_file ):
 
 
 def getDataLoadCountc( py_file ):
-    logObj = projectLogger.giveMeLoggingObject ()
+    logobj = projectLogger.giveMeLoggingObject ()
     logobj.info("Third Data Load Counter Method Activated | C")
     data_load_countc = 0 
     logobj.info("The data load count C is initialized to {}".format(data_load_countc))
@@ -288,7 +288,7 @@ def getModelLoadCounta( py_file ):
     
     
 def getModelLoadCountb( py_file ):
-    logObj = projectLogger.giveMeLoggingObject ()
+    logobj = projectLogger.giveMeLoggingObject ()
     logobj.info("Second MODEL Load Counter Method Activated | B")
     model_load_countb = 0 
     logobj.info("The model load count B is initialized to {}".format(model_load_countb))
