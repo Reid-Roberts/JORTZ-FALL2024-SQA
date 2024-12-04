@@ -235,7 +235,7 @@ def getDataLoadCountc( py_file ):
 
 
 def getModelLoadCounta( py_file ):
-    logObj = projectLogger.giveMeLoggingObject ()
+    logobj = projectLogger.giveMeLoggingObject ()
     logobj.info("First MODEL Load Counter Method Activated | A")
     model_load_counta = 0 
     logobj.info("The model load count A is initialized to {}".format(model_load_counta))
